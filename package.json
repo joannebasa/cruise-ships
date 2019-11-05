@@ -1,0 +1,14 @@
+{
+  "name": "cruise-ships",
+  "version": "1.0.0",
+  "description": "MCR Codes Week 9 Exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Joanne Basa",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
