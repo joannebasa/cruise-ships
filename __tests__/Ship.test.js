@@ -12,9 +12,11 @@ describe ('Ship', () => {
   });
 });
 
-describe ('board() must add passengers', () => {
-  const ship = new Ship('Titanic', 'Southampton', 1);
+describe ('board() method to add passengers', () => {
+  it('must add 1 passenger', () => {
+    const ship = new Ship('Titanic', 'Southampton', 1);
 
-  ship.board();
-  expect (ship.passengers).toEqual(2);
+    ship.board();
+    expect (ship.passengers).toEqual(2);
+  });
 });
