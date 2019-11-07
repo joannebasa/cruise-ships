@@ -6,7 +6,7 @@ describe ('Ship', () => {
   });
 
   it('should have a starting port', () => {
-    const ship = new Ship('Titanic', 'Southampton');
+    const ship = new Ship ('Titanic', 'Southampton');
 
     expect(ship.startingPort).toBe('Southampton');
   });
@@ -14,18 +14,30 @@ describe ('Ship', () => {
 
 describe ('board() method to add passengers', () => {
   it('must add 1 passenger', () => {
-    const ship = new Ship('Titanic', 'Southampton', 1);
+    const ship = new Ship ('Titanic', 'Southampton', 1);
 
     ship.board();
+
     expect (ship.passengers).toEqual(2);
   });
 });
 
 describe ('dock must assign a destination to ship', () => {
   it('must add a destination port', () => {
-    const ship = new Ship('Jolly Roger', 'Southampton', '10')
+    const ship = new Ship ('Jolly Roger', 'Southampton', '10')
 
     ship.dock();
+
     expect (ship.destination = "Liverpool");
+  });
+});
+
+describe('ship can set sail', () => {
+  it ('setSail() should turn startingPort to false', () => {
+    const ship = new Ship ('Southampton');
+
+    ship.setSail();
+    
+    expect (ship.startingPort).toBeFalsy();
   });
 });

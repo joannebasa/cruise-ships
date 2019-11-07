@@ -6,13 +6,18 @@ class Ship {
     this.destination = destination;
   }
 
-  board(){
+  board() {
     this.passengers +=1;
   };
 
-  dock(){
+  dock() {
     this.destination = "Liverpool";
   };
+
+  setSail() {
+    this.startingPort = false;
+  };
+
 };
 
   
