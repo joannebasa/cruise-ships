@@ -1,17 +1,12 @@
 class Ship {
-  constructor(name, startingPort, passengers, destination) {
-    this.name = name;
+  constructor(vesselName, startingPort, passengers) {
+    this.vesselName = vesselName;
     this.startingPort = startingPort;
     this.passengers = passengers;
-    this.destination = destination;
-  }
+  };
 
   board() {
     this.passengers +=1;
-  };
-
-  dock() {
-    this.destination = "Liverpool";
   };
 
   setSail() {
@@ -20,8 +15,7 @@ class Ship {
 
 };
 
-  
-    
+
 module.exports = Ship;
     
     /*To do:
@@ -29,5 +23,7 @@ module.exports = Ship;
     So I can get passengers aboard a ship,
     I want a ship to have a starting port."
     
-    - create another method for Ship -> ?dock
+    - create another method for Ship -> ?dock - done
+    - new Port object - takes a name for now
+    - fix Ship to take port as string??
     */

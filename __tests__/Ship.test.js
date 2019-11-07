@@ -1,19 +1,21 @@
 const Ship = require('../src/Ship.js');
 
+//Objects
 describe ('Ship', () => {
-  it('object can be created',() => {
+  it ('Ship object can be created',() => {
     expect(new Ship()).toBeInstanceOf(Object);
   });
 
-  it('should have a starting port', () => {
+  it ('should have a starting port', () => {
     const ship = new Ship ('Titanic', 'Southampton');
 
-    expect(ship.startingPort).toBe('Southampton');
+    expect (ship.startingPort).toBe('Southampton');
   });
 });
 
+//methods
 describe ('board() method to add passengers', () => {
-  it('must add 1 passenger', () => {
+  it ('must add 1 passenger', () => {
     const ship = new Ship ('Titanic', 'Southampton', 1);
 
     ship.board();
@@ -22,15 +24,7 @@ describe ('board() method to add passengers', () => {
   });
 });
 
-describe ('dock must assign a destination to ship', () => {
-  it('must add a destination port', () => {
-    const ship = new Ship ('Jolly Roger', 'Southampton', '10')
 
-    ship.dock();
-
-    expect (ship.destination = "Liverpool");
-  });
-});
 
 describe('ship can set sail', () => {
   it ('setSail() should turn startingPort to false', () => {
