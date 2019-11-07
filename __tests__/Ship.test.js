@@ -20,3 +20,12 @@ describe ('board() method to add passengers', () => {
     expect (ship.passengers).toEqual(2);
   });
 });
+
+describe ('dock must assign a destination to ship', () => {
+  it('must add a destination port', () => {
+    const ship = new Ship('Jolly Roger', 'Southampton', '10')
+
+    ship.dock();
+    expect (ship.destination = "Liverpool");
+  });
+});

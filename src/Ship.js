@@ -1,12 +1,17 @@
 class Ship {
-  constructor(name, startingPort, passengers) {
+  constructor(name, startingPort, passengers, destination) {
     this.name = name;
     this.startingPort = startingPort;
     this.passengers = passengers;
+    this.destination = destination;
   }
 
   board(){
-  this.passengers +=1;
+    this.passengers +=1;
+  };
+
+  dock(){
+    this.destination = "Liverpool";
   };
 };
 
@@ -19,7 +24,5 @@ module.exports = Ship;
     So I can get passengers aboard a ship,
     I want a ship to have a starting port."
     
-    - ? object Ship - done
-    - Ship should have 'starting port' key-value pair - done?
-    - ?board method
+    - create another method for Ship -> ?dock
     */
