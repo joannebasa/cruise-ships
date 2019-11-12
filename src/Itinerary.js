@@ -1,7 +1,7 @@
-class Port {
+class Itinerary {
   constructor(name) {
     this.name = name;
   };
 };
 
-module.exports = Port;
+module.exports = Itinerary;
