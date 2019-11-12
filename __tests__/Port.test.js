@@ -1,17 +1,14 @@
 const Port = require('../src/Port.js');
+const Ship = require('../src/Ship.js');
 
 describe ('Port', () => {
   it ('Port object can be created',() => {
         expect(new Port()).toBeInstanceOf(Object);
   });
-});
 
-describe ('dock must assign a destination to ship', () => {
-  it ('must add a destination port', () => {
-    const port = new Port;
+  it('takes a name property', () => {
+    const port = new Port ('Portsmouth');
 
-    port.dock();
-    
-    expect (port.portName = 'Liverpool');
+    expect(port.name).toBe('Portsmouth');
   });
 });

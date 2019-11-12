@@ -1,7 +1,9 @@
+
+
 class Port {
-  dock(portName) {
-    this.portName = portName;
-  }
-}
+  constructor(name) {
+    this.name = name;
+  };
+};
 
 module.exports = Port;

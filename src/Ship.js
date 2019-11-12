@@ -1,8 +1,10 @@
+const Port = require("../src/Port.js");
+
 class Ship {
-  constructor(vesselName, startingPort, passengers) {
+  constructor(vesselName, passengers, port) {
     this.vesselName = vesselName;
-    this.startingPort = startingPort;
     this.passengers = passengers;
+    this.currentPort = port;
   };
 
   board() {
@@ -11,6 +13,10 @@ class Ship {
 
   setSail() {
     this.startingPort = false;
+  };
+
+  dock(port) {
+    this.currentPort = port;
   };
 
 };

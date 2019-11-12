@@ -9,6 +9,7 @@
   "author": "Joanne Basa",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.7.0",
     "jest": "^24.9.0"
   }
 }
