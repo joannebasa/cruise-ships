@@ -1,50 +1,55 @@
-const Ship = require('../src/Ship.js');
-const Port = require('../src/Port.js');
+const Ship = require("../src/Ship.js");
+const Port = require("../src/Port.js");
 
 //Objects
-describe ('Ship', () => {
-  it ('Ship object can be created',() => {
-    expect(new Ship()).toBeInstanceOf(Object);
-  });
+describe("Ship", () => {
+  it("Ship object can be created", () => {
+    expect(new Ship()).toBeInstanceOf(Object);
+  });
+
+  it("previousPort property set to null", () => {
+    const ship = new Ship("Titanic", 1, "Southampton");
+    expect(ship.previousPort).toBe(null);
+  });
 });
 
 //methods
-describe ('board() method to add passengers', () => {
-  it ('must add 1 passenger', () => {
-    const ship = new Ship ('Titanic', 1);
+describe("board() method to add passengers", () => {
+  it("must add 1 passenger", () => {
+    const ship = new Ship("Titanic", 1);
 
     ship.board();
 
-    expect (ship.passengers).toEqual(2);
+    expect(ship.passengers).toEqual(2);
   });
 });
 
-describe ('ship can set sail', () => {
-  it ('setSail() should turn startingPort to false', () => {
-    const port = new Port('Dover');
-    const ship = new Ship (port);
+describe("ship can set sail", () => {
+  it("setSail() should turn startingPort to false", () => {
+    const port = new Port("Dover");
+    const ship = new Ship(port);
 
     ship.setSail();
-    
-    expect (ship.currentPort).toBeFalsy();
+
+    expect(ship.currentPort).toBeFalsy();
   });
 });
 
-describe ('can display current port', () => {
-  it ('should have a starting port', () => {
-    const port = new Port('Dover');
-    const ship = new Ship('Titanic', 20, port);
-     
-    expect (ship.currentPort).toBe(port);
+describe("can display current port", () => {
+  it("should have a starting port", () => {
+    const port = new Port("Dover");
+    const ship = new Ship("Titanic", 20, port);
+
+    expect(ship.currentPort).toBe(port);
   });
 });
 
-describe ('can dock on a DIFFERENT port', () => {
-  const dover = new Port('Dover');
+describe("can dock on a DIFFERENT port", () => {
+  const dover = new Port("Dover");
   const ship = new Ship(dover);
 
-  const calais = new Port('Calais');
+  const calais = new Port("Calais");
   ship.dock(calais);
 
-  expect (ship.currentPort).toBe(calais);
+  expect(ship.currentPort).toBe(calais);
 });
